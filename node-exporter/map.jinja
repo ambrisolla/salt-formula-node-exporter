@@ -1,0 +1,11 @@
+#!jinja|yaml
+
+{% if grains['osarch'] == 'x86_64' %}
+{% set arch = 'amd64' %}
+{% endif %}
+
+{% set config = {
+    'port' : '9109',
+    'version' : '1.6.0',
+    'arch' : arch }
+%}
